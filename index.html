@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বিশেষ অনলাইন আয়ের সুযোগ | বিনিয়োগ ছাড়াই</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Modern Color Palette & Variables */
+        :root {
+            --primary: #1F2937; 
+            --secondary: #06B6D4; 
+            --accent: #FBBF24; 
+            --light: #F9FAFB; 
+            --white: #ffffff;
+            --text-color: #4B5563; 
+            --danger: #EF4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* CTA Buttons */
+        .btn {
+            padding: 18px 40px; 
+            border: none;
+            border-radius: 10px; 
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary);
+            box-shadow: 0 5px 20px rgba(251, 191, 36, 0.5);
+        }
+        .btn-primary:hover {
+            background-color: #EAB308;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(251, 191, 36, 0.7);
+        }
+
+        /* Urgency Section */
+        .urgency-header {
+            background: linear-gradient(90deg, var(--danger), #CC3333);
+            color: var(--white);
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section Styling */
+        .hero {
+            padding: 60px 0 40px; 
+            background: var(--white);
+            text-align: center;
+            border-bottom: 5px solid var(--secondary);
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            color: var(--primary);
+        }
+        .hero h1 span {
+            color: var(--secondary);
+        }
+        
+        .hero-text p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            color: var(--danger);
+            font-weight: 700;
+        }
+
+        /* Countdown Timer */
+        .timer-box {
+            background-color: #ffe0b2; 
+            border: 3px solid var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--primary);
+        }
+        .timer-box strong {
+            font-size: 1.5rem;
+            color: var(--danger);
+            margin-right: 10px;
+        }
+
+        /* Testimonials */
+        .credibility {
+            background-color: var(--light);
+            padding: 60px 0;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--secondary);
+            text-align: left;
+        }
+        .author-info h4 { margin: 0; color: var(--primary); font-weight: 600; }
+        .author-info p { margin: 0; font-size: 0.9em; color: var(--secondary); }
+
+        /* Disclaimer Section */
+        .disclaimer-section {
+            padding: 30px 0;
+            background-color: #fef2f2; 
+            color: var(--danger); 
+            text-align: center;
+            font-size: 0.95em;
+            border-top: 5px solid var(--danger);
+            border-bottom: 5px solid var(--danger);
+        }
+        
+        .disclaimer-section p {
+            max-width: 800px;
+            margin: 10px auto;
+            line-height: 1.7;
+        }
+        .disclaimer-section h3 {
+            color: var(--danger);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        /* Final CTA */
+        .final-cta-section {
+            padding: 50px 0;
+            text-align: center;
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        .final-cta-section h2 {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero-text p { font-size: 1.2rem; }
+            .btn { padding: 15px 30px; font-size: 1.1rem; }
+            .testimonial-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="urgency-header">
+        🔔 দ্রুত অ্যাক্সেস নিশ্চিত করুন! আজকের বিশেষ অফারটি আর মাত্র <span id="hours">02</span>:<span id="minutes">30</span>:<span id="seconds">00</span> মিনিট থাকবে।
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>**বিনিয়োগ ছাড়া** স্মার্টফোন দিয়ে **<span>দৈনিক আয়</span>** করুন!</h1>
+                <p>৯৮% সফলতার হার নিয়ে শুরু করুন—আপনার আর্থিক স্বাধীনতা এখন মাত্র এক ক্লিক দূরে!</p>
+                
+                <div class="hero-buttons">
+                    <a href="#" onclick="redirectToSmartLink(event)" class="btn btn-primary">
+                        <i class="fas fa-hand-point-right"></i> **এখনই ফ্রি রেজিস্ট্রেশন স্লট বুক করুন!**
+                    </a>
+                </div>
+
+                <div class="timer-box">
+                    <strong>সতর্কতা:</strong> আর মাত্র কয়েকটি স্লট বাকি আছে।
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="credibility">
+        <div class="container">
+            <h2 class="section-title">🏆 আমাদের ইউজারদের সফলতার গল্প</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"আমি ছাত্র হিসেবে হিমশিম খাচ্ছিলাম, কিন্তু এই সহজ পদ্ধতি ব্যবহার করে এখন মাসে \$250+ অতিরিক্ত আয় করছি। কোনো অভিজ্ঞতা দরকার হয়নি।"</p>
+                    <div class="author-info">
+                        <h4>Md. Karim</h4>
+                        <p>ঢাকা</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"বিশ্বাস করতে পারিনি! মাত্র এক সপ্তাহে আমি আমার প্রথম পে-আউট পেয়েছি। এর চেয়ে দ্রুত আয় করার সুযোগ আর কোথাও পাইনি।"</p>
+                    <div class="author-info">
+                        <h4>Nusrat Jahan</h4>
+                        <p>চট্টগ্রাম</p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"রিস্ক-ফ্রি হওয়ায় শুরু করেছিলাম। এখন আমি আমার পার্ট-টাইম কাজ ছেড়ে দিয়েছি। এটি সত্যিই আমার জীবনের মোড় ঘুরিয়ে দিয়েছে।"</p>
+                    <div class="author-info">
+                        <h4>Robiul Islam</h4>
+                        <p>খুলনা</p>
+                    </div>
+                </div>
+            </div>
+             <a href="#" onclick="redirectToSmartLink(event)" class="btn btn-primary" style="margin-top: 40px; font-size: 1.1rem;">
+                <i class="fas fa-user-check"></i> আমি তাদের সাথে যোগ দিতে চাই! এখনই জয়েন করুন।
+            </a>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white); text-align: center;">
+        <div class="container">
+            <h2 class="section-title">৩টি সহজ ধাপে কাজ শুরু করুন:</h2>
+            <div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div style="width: 30%; min-width: 250px; margin: 15px; padding: 20px; border: 1px dashed #ccc; border-radius: 8px;">
+                    <i class="fas fa-user-edit" style="font-size: 2.5rem; color: var(--secondary);"></i>
+                    <h3>১. ফ্রি রেজিস্ট্রেশন</h3>
+                    <p>নিচের বাটনে ক্লিক করে দ্রুত আপনার ফ্রি অ্যাকাউন্ট তৈরি করুন।</p>
+                    <a href="#" onclick="redirectToSmartLink(event)" class="btn btn-primary" style="margin-top: 15px; font-size: 1rem; padding: 10px 20px;">
+                        রেজিস্টার করুন
+                    </a>
+                </div>
+                <div style="width: 30%; min-width: 250px; margin: 15px; padding: 20px; border: 1px dashed #ccc; border-radius: 8px;">
+                    <i class="fas fa-tasks" style="font-size: 2.5rem; color: var(--secondary);"></i>
+                    <h3>২. কাজ নির্বাচন</h3>
+                    <p>সহজ এবং ইন্টারেক্টিভ ছোট কাজগুলো নির্বাচন করুন।</p>
+                </div>
+                <div style="width: 30%; min-width: 250px; margin: 15px; padding: 20px; border: 1px dashed #ccc; border-radius: 8px;">
+                    <i class="fas fa-money-bill-wave" style="font-size: 2.5rem; color: var(--secondary);"></i>
+                    <h3>৩. পেমেন্ট গ্রহণ</h3>
+                    <p>কাজ শেষ হওয়ার সাথে সাথেই আপনার অ্যাকাউন্টে পেমেন্ট নিন।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>আপনার জীবন পরিবর্তন করার সুযোগ হাতছাড়া করবেন না!</h2>
+            <p>আপনার ফ্রি স্লট নিশ্চিত করতে এবং আজই আয় শুরু করতে নিচের বাটনে ক্লিক করুন।</p>
+             <a href="#" onclick="redirectToSmartLink(event)" class="btn btn-primary" style="font-size: 1.5rem;">
+                <i class="fas fa-lock"></i> **আমার ফ্রি স্লট বুক করুন**
+            </a>
+        </div>
+    </section>
+
+
+    <section class="disclaimer-section">
+        <div class="container">
+            <h3>🔔 গুরুত্বপূর্ণ তথ্য এবং সতর্কতা 🔔</h3>
+            <p>
+                আপনার গোপনীয়তা আমাদের কাছে গুরুত্বপূর্ণ। এই পেজ থেকে পরবর্তী ওয়েবসাইটে যাওয়ার সময় আপনি অফারটির **শর্তাবলী (Terms & Conditions)** এবং **গোপনীয়তা নীতি (Privacy Policy)** মেনে চলছেন বলে গণ্য হবেন। অনুগ্রহ করে মনে রাখবেন, আয়ের পরিমাণ আপনার ব্যক্তিগত চেষ্টা এবং বাজারের পরিস্থিতির উপর নির্ভরশীল; আমরা কোনো নির্দিষ্ট ফলাফলের নিশ্চয়তা দিই না।
+            </p>
+            <p style="margin-top: 10px; font-weight: 600;">[financial-freedom] • Privacy Policy • Terms of Use • Contact</p>
+        </div>
+    </section>
+
+    <script>
+        // SMART LINK ROTATOR FUNCTIONALITY
+        const smartLinks = [
+            "https://www.effectivegatecpm.com/umakdd9f?key=edf1415db04eb89464c9c5c5a6b0675c",
+            "https://www.effectivegatecpm.com/gz9fp97d?key=f63ee8082d89b7c0cc329a474050c260",
+            "https://www.effectivegatecpm.com/mzp8tibte7?key=babff949bbaab4432cfb0c96de18fbcb",
+            "https://www.effectivegatecpm.com/m06kn12uxn?key=658048d457d4cdcd38fc8adbc8142801",
+            "https://www.effectivegatecpm.com/s6jvym5qz?key=63243ff4b4a14344cd98e06025d6e06a"
+        ];
+
+        function redirectToSmartLink(event) {
+            event.preventDefault(); // Prevents default link action
+            
+            // Get a random index from 0 to 4
+            const randomIndex = Math.floor(Math.random() * smartLinks.length);
+            
+            // Get the selected random link
+            const selectedLink = smartLinks[randomIndex];
+            
+            // Redirect the user in a new tab (recommended)
+            window.open(selectedLink, '_blank');
+        }
+
+
+        // DEMO Countdown Timer Script
+        function startDemoTimer(duration, display) {
+            let timer = duration, hours, minutes, seconds;
+            
+            const interval = setInterval(function () {
+                timer--;
+
+                if (timer < 0) {
+                    clearInterval(interval);
+                    document.getElementById('hours').textContent = "00";
+                    document.getElementById('minutes').textContent = "00";
+                    document.getElementById('seconds').textContent = "00";
+                    document.querySelector('.urgency-header').textContent = "⛔ রেজিস্ট্রেশন বন্ধ! সুযোগটি হাতছাড়া হয়েছে।";
+                    return;
+                }
+
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+                
+            }, 1000);
+        }
+
+        // Start timer for 2 hours and 30 minutes (9000 seconds)
+        window.onload = function () {
+            const twoHoursThirtyMinutes = 9000; 
+            const display = document.querySelector('#hours'); 
+            startDemoTimer(twoHoursThirtyMinutes, display);
+        };
+    </script>
+</body>
+</html>
